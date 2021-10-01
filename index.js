@@ -40,5 +40,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(process.env.PORT || port, () => {
-    console.log('API REST is running ' + port + '!!!!!');
+    console.log('API REST is running ' + process.env.PORT || port + '!!!!!');
 });

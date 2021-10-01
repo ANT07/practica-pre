@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 
 const cors = require('cors');
 
+const port = 8985;
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(bodyParser.json());
@@ -37,6 +39,6 @@ app.get('/', (req, res) => {
     res.send("Hola mundo");
 });
 
-app.listen(8985, () => {
-    console.log('API REST is running 8985 !!!!!');
+app.listen(process.env.PORT || port, () => {
+    console.log('API REST is running ' + port + '!!!!!');
 });
